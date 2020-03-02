@@ -140,7 +140,7 @@ for k, channel in enumerate(CHANNEL_SET):
 # The configeration below will display as RXXXX (Channel).Location Name.Brg: XX. XXmi : xxkm  MaxAmp :xxxx
 
 for k, wave in enumerate(waveform):
-    waveform[k].stats.network = STATION + ' (' + channel +')'
+    waveform[k].stats.network = STATION + ' (' + CHANNEL_SET[k] +')'
     waveform[k].stats.station = STA_LOCNAME
     waveform[k].stats.location = " Brg: " + str(round(BEARING))+ u"\N{DEGREE SIGN} "
     waveform[k].stats.channel = str(format(int(STA_DIST/1000* 0.621371), ',d')) + "mi | " + str(format(int(STA_DIST/1000), ',d')) +"km  MaxAmp: " + maxamp[k] # Distance in km
