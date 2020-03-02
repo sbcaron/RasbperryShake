@@ -6,7 +6,7 @@
 #
 # Options available:
 # Display all four 4D channels
-# Dispay phase arrival times
+# Display phase arrival times
 # Display globe with phase arrivals
 #
 
