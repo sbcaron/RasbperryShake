@@ -223,6 +223,9 @@ if PLOT_PHASE_GLOBE:  # Add the inset picture of the globe at x, y, width, heigh
         ax1 = fig1.add_axes([0.68, 0.48, 0.4, 0.4], polar=True)
         for phase_time, phase_name, arrival_legend, color_plot, arrival_vertline in plotted_arrivals:
             arrivals = model.get_ray_paths(EVT_Z, STA_DEGREES, phase_list=[phase_name])
+            if (len(arrivals)) > 1:
+                m = (len(arrivals)) - 1
+                arrivals = arrivals[: -m or None]  #If more than one of the same phase, use the earliers phase time
             ax1 = arrivals.plot_rays(plot_type='spherical',
                                      legend=True, label_arrivals=False,
                                      plot_all=True,
