@@ -40,7 +40,7 @@ NETWORK = 'AM'                  # AM = RaspberryShake network
 STATION = "RXXXX"               # Station code of local station to plot
 STA_LAT = 30.000                # + for N, - for S
 STA_LON = -114.0000             # + for E, - for W
-CHANNEL = 'EHZ'                 # RS Geophone Channel. 1D:SHZ  4D:EHZ
+CHANNEL = 'EHZ'                 # RS Geophone Channel. 1D:SHZ - (50 sps Geophone), EHZ - (100 sps Geophone)  4D:EHZ
 STA_LOCNAME = 'Anytown, Ca'
 
 
